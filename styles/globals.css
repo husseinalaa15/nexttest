@@ -1,33 +1,175 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+img, video {
+	max-width: 100%;
+	height: auto;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+*, ::after, ::before {
+	box-sizing: border-box;
+	border: 0 solid #e5e7eb;
 }
-
+::after, ::before {
+	--tw-content:"": ;
+}
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+a {
+	color: inherit;
+	text-decoration: inherit;
+}
+*, ::after, ::before {
+	--tw-border-spacing-x:0: ;
+	--tw-border-spacing-y:0: ;
+	--tw-translate-x:0: ;
+	--tw-translate-y:0: ;
+	--tw-rotate:0: ;
+	--tw-skew-x:0: ;
+	--tw-skew-y:0: ;
+	--tw-scale-x:1: ;
+	--tw-scale-y:1: ;
+	--tw-pan-x:: ;
+	--tw-pan-y:: ;
+	--tw-pinch-zoom:: ;
+	--tw-scroll-snap-strictness:proximity: ;
+	--tw-gradient-from-position:: ;
+	--tw-gradient-via-position:: ;
+	--tw-gradient-to-position:: ;
+	--tw-ordinal:: ;
+	--tw-slashed-zero:: ;
+	--tw-numeric-figure:: ;
+	--tw-numeric-spacing:: ;
+	--tw-numeric-fraction:: ;
+	--tw-ring-inset:: ;
+	--tw-ring-offset-width:0px: ;
+	--tw-ring-offset-color:#fff: ;
+	--tw-ring-color:rgba(63,131,248,.5): ;
+	--tw-ring-offset-shadow:0 0 #0000: ;
+	--tw-ring-shadow:0 0 #0000: ;
+	--tw-shadow:0 0 #0000: ;
+	--tw-shadow-colored:0 0 #0000: ;
+	--tw-blur:: ;
+	--tw-brightness:: ;
+	--tw-contrast:: ;
+	--tw-grayscale:: ;
+	--tw-hue-rotate:: ;
+	--tw-invert:: ;
+	--tw-saturate:: ;
+	--tw-sepia:: ;
+	--tw-drop-shadow:: ;
+	--tw-backdrop-blur:: ;
+	--tw-backdrop-brightness:: ;
+	--tw-backdrop-contrast:: ;
+	--tw-backdrop-grayscale:: ;
+	--tw-backdrop-hue-rotate:: ;
+	--tw-backdrop-invert:: ;
+	--tw-backdrop-opacity:: ;
+	--tw-backdrop-saturate:: ;
+	--tw-backdrop-sepia:: ;
+}
+html {
+	line-height: 1.5;
+	-webkit-text-size-adjust: 100%;
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+	font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+	font-feature-settings: normal;
+	font-variation-settings: normal;
+}
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+	margin: 0;
+	line-height: inherit;
 }
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+button, div, h1, h2, h3, h4, h5, h6, html[dir=rtl] body p, span {
+	letter-spacing: 0px !important;
+}
+button, div, h1, h2, h3, h4, h5, h6, html[dir=ltr] body p, span {
+	letter-spacing: -0.02em !important;
+}
+body {
+	font-family: apercu,"sans-serif";
+}
+html {
+	scroll-behavior: smooth;
+	--tw-text-opacity:1: ;
+	color: rgb(24 48 41/var(--tw-text-opacity));
+	height: 100%;
+}
+::selection {
+	color: #fff;
+	background-color: #016777bd;
+}
+.ie-layout {
+	position: relative;
+	width: 100%;
+	min-height: 100%;
+}
+#__next, body {
+	height: 100%;
+}
+:root {
+	--fallBackImage:linear-gradient(90deg,#d9d9d9,#fff): ;
+	--backgroundCover:cover: ;
+	--backgroundRepeat:no-repeat: ;
+}
+:root {
+	--swiper-theme-color:#007aff: ;
+}
+:root {
+	--swiper-navigation-size:44px: ;
+}
+audio, canvas, embed, iframe, img, object, svg, video {
+	display: block;
+	vertical-align: middle;
+}
+.ie-layout img {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	width: 100%;
+	height: 100%;
+}
+.downloadEdgewrapper {
+	width: 100%;
+	position: absolute;
+	top: 10%;
+}
+.downloadEdgecard {
+	max-width: 780px;
+	margin: auto;
+	background-color: red;
+	padding: 72px 36px;
+	border-radius: 12px;
+}
+.downloadEdgeimg {
+	/* background-image: url(/images/ieLogo.png); */
+  background-color:"black";
+	background-repeat: no-repeat;
+	background-position: 50%;
+	height: 180px;
+	margin-bottom: 38px;
+}
+.downloadEdgecontent {
+	text-align: center;
+}
+.downloadEdgetitle {
+	font-size: 42px;
+	font-weight: 700;
+}
+.downloadEdgesubtitle {
+	font-size: 22px;
+}
+.downloadEdgebutton {
+	margin-top: 24px;
+}
+.downloadEdgebutton a {
+	color: #f4f6f6 !important;
+	text-decoration: none;
+	padding: 14px 18px;
+	background-color: #ae9213;
+	border-radius: 6px;
 }

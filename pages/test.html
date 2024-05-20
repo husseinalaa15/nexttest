@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Card Component</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px;
+    position: relative;
+}
+
+.image-wrapper {
+    width: 100%;
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 20px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.card-title {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.card-description {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #666;
+}
+
+.card-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.card-button:hover {
+    background-color: #0056b3;
+}
+
+@media (min-width: 768px) {
+    .card-container {
+        flex-direction: row;
+        max-width: none;
+        align-items: center;
+    }
+
+    .image-wrapper {
+        flex: 0 0 60%;
+    }
+
+    .card-content {
+        flex: 0 0 50%;
+        padding: 40px;
+        margin-left: -10%;
+        background-color: #fff;
+    }
+}
+
+</style>
+<body>
+    <div class="card-container">
+        <div class="image-wrapper" style="background-color: red;">
+            <img src="image.jpg" alt="Image" class="card-image">
+        </div>
+        <div class="card-content" style="background-color: red;">
+            <h2 class="card-title">Card Title</h2>
+            <p class="card-description">This is a description of the card. It provides additional details and context.</p>
+            <button class="card-button">Action</button>
+        </div>
+    </div>
+</body>
+</html>
